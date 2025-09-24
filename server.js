@@ -20,6 +20,7 @@ app.use(session({
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+
 // URL da API externa
 const API_URL = 'http://localhost:8080';
 
@@ -104,6 +105,22 @@ app.post('/update-profile', (req, res) => {
     } else {
         res.redirect('/login');
     }
+});
+
+app.get('/index', (req, res) => {
+    res.render('index');
+});
+
+app.get('/smartwallet', (req, res) => {
+    res.render('smartwallet');
+});
+
+app.get('/smartnode', (req, res) => {
+    res.render('smartnode');
+});
+
+app.get('/smartcontract', (req, res) => {
+    res.render('smartcontract');
 });
 
 app.listen(port, () => {
