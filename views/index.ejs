@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Dayson.AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Dayson.AI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Funcionalidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contato</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <% if (isAuthenticated) { %>
+                    <a href="/dashboard" class="btn btn-light"><%= user.username %></a>
+                <% } else { %>
+                    <a href="/login" class="btn btn-outline-light me-2">Logar</a>
+                    <a href="/register" class="btn btn-light">Criar Conta</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="container py-5 text-center">
+    <h2 class="display-4 fw-bold mb-4">Bem-vindo ao Dayson.AI</h2>
+    <p class="lead text-muted mb-4">Nosso projeto de IA Generativa permite criar conteúdo inovador, desde textos e imagens até soluções personalizadas para seu negócio.</p>
+    <a href="#contact" class="btn btn-primary btn-lg">Saiba Mais</a>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="bg-light py-5">
+    <div class="container">
+        <h2 class="display-5 fw-bold text-center mb-5">Por que escolher nossa IA?</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Criação Automatizada</h3>
+                        <p class="card-text">Gere textos, imagens e outros conteúdos com rapidez e precisão.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Personalização</h3>
+                        <p class="card-text">Adapte a IA às suas necessidades específicas com facilidade.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Escalabilidade</h3>
+                        <p class="card-text">Soluções que crescem com seu negócio, prontas para grandes demandas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container py-5 text-center">
+    <h2 class="display-5 fw-bold mb-4">Entre em Contato</h2>
+    <p class="lead text-muted mb-4">Quer saber mais sobre como nossa IA pode ajudar seu projeto? Envie-nos uma mensagem!</p>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <input type="text" class="form-control mb-3" placeholder="Seu nome">
+            <input type="email" class="form-control mb-3" placeholder="Seu e-mail">
+            <textarea class="form-control mb-3" placeholder="Sua mensagem" rows="4"></textarea>
+            <button class="btn btn-primary btn-lg">Enviar</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white py-4">
+    <div class="container text-center">
+        <p>&copy; 2025 Projeto Dayson.AI. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
