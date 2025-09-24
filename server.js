@@ -123,6 +123,10 @@ app.get('/smartcontract', (req, res) => {
     res.render('smartcontract');
 });
 
+app.get('/sobre', (req, res) => {
+    res.render('sobre');
+});
+
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
